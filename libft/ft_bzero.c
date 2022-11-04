@@ -1,1 +1,1 @@
-void ft_bzero(void *string, )
+void ft_bzero(void *string)
