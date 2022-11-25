@@ -6,7 +6,7 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:50:32 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:51:02 by mdor             ###   ########.fr       */
+/*   Updated: 2022/11/25 13:54:17 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,16 @@ int ft_isalpha(char c)
 {
     if (c >= 65 && c <= 90)
         return (1);
-    if ( c >= 97 && c <= 122)
+    if (c >= 97 && c <= 122)
         return (1);
     else
         return (0);
 }
+
+/*#include <stdio.h>
+int main ()
+{
+    char a;
+    a = 'a';
+    printf ("%d\n",(ft_isalpha(a)));
+}*/

@@ -6,8 +6,18 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:50:05 by mdor             ###   ########.fr       */
+/*   Updated: 2022/11/25 13:37:19 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_bzero(void *string)
+void ft_bzero(void *s, size_t n)
+{
+    int i;
+
+    i = 0;
+    while(i < n)
+    {
+        s[i] = '\0';
+        i++
+    }
+}

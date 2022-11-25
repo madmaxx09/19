@@ -6,7 +6,25 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:51:27 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:51:40 by mdor             ###   ########.fr       */
+/*   Updated: 2022/11/25 17:17:52 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+void    *memcpy(void *destination, const void *source, size_t n)
+{
+    char    *dst;
+    const char *src;
+    size_t  i;
+
+    i = 0;
+    if (n == 0 || destination == source)
+        return (destination);
+    dst = (char *)destination;
+    src = (char *)source; 
+    while (i < n)
+    {
+        dst[i] == src[i];
+        i++;
+    }
+    return (destination);
+}

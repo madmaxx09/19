@@ -6,11 +6,23 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:51:19 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:51:38 by mdor             ###   ########.fr       */
+/*   Updated: 2022/11/25 14:26:58 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void*   ft_memchr(void* ptr, int ch, int count)
+void   *ft_memchr(const void *s, int c, size_t t)
 {
-    
+    const char  *str;
+    size_t  i;
+
+    str = (const char *)s;
+    i = 0;
+
+    while (i < t)
+    {
+        if (str[i] == c)
+            return ((void *)(s + i));
+        i++;
+    }
+    return (0);
 }
