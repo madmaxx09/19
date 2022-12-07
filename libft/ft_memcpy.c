@@ -6,11 +6,11 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:51:27 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/25 17:17:52 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/07 13:44:36 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void    *memcpy(void *destination, const void *source, size_t n)
+void    *ft_memcpy(void *destination, const void *source, size_t n)
 {
     char    *dst;
     const char *src;

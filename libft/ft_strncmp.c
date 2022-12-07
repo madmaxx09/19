@@ -6,11 +6,11 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:53:11 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/25 17:32:38 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/02 14:24:02 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int strncmp(const char *first, const char *second, size_t n)
+int ft_strncmp(const char *first, const char *second, size_t n)
 {
     int i;
 

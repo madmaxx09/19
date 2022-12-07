@@ -6,11 +6,11 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:52:56 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:53:58 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/02 14:23:34 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char*   strchr(char* str, int ch)
+char    *ft_strchr(char* str, int ch)
 {
    int i;
 
