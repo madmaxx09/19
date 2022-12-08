@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:54:17 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/07 15:38:22 by mdor             ###   ########.fr       */
+/*   Created: 2022/12/08 12:49:09 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/08 12:59:44 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strrchr(const char *string, int i)
+char *ft_strdup(const char *source)
 {
-    int j; 
+    void *a;
+    int i;
 
-    j = 0;
+    i = 0;
+    while (source[i])
+        i++    
+    a = malloc(sizeof(char)*(i + 1))
+    if (!a)
+        return (NULL);
     
-    while (string[j])
-        j++;
-    while (j >= 0)
-    {
-        if (string[j] == i)
-    }
-    return (NULL)
 }

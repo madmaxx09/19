@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:54:17 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/07 15:38:22 by mdor             ###   ########.fr       */
+/*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/08 12:42:04 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strrchr(const char *string, int i)
-{
-    int j; 
+#include "libft.h"
 
-    j = 0;
-    
-    while (string[j])
-        j++;
-    while (j >= 0)
-    {
-        if (string[j] == i)
-    }
-    return (NULL)
+void *ft_calloc(size_t elemCount, size_t elemSize)
+{
+    void *a;
+
+    a = malloc(elemCount * elemSize);
+    if (!a)
+        return (NULL);
+    ft_bzero(a, elemCount);
+    return (a);
 }
