@@ -1,30 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/08 17:57:29 by mdor             ###   ########.fr       */
+/*   Created: 2022/12/09 09:46:30 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/09 10:12:59 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-void ft_bzero(void *s, size_t n)
+#include "libft.h"
+
+char    *ft_strjoin(char const *s1, char const *s2)
 {
     int i;
+    int j;
+    char *new;
 
+    i = ft_strlen(s1);
+    j = ft_strlen(s2);
+
+    new = malloc(sizeof(char) * (i + j + 1));
+    if (!new)
+        return (NULL);
     i = 0;
-    while(i < n)
-    {
-        s[i] = '\0';
-        i++
-    }
-}
+    j = 0;
 
-int main ()
-{
-        char test[] =
-        printf("%s\n", ft_bzero(test));
+    while (s1[i])
+    {
+        new[j++] = s1[i];
+        i++;
+    }
+    i = 0;
+    while (s2[i])
+    {
+        new[j++] = s2[i];
+        i++;
+    }
+    new[j] = '\0';
+    return (new);    
 }

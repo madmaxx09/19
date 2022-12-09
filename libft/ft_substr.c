@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:50:57 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/08 18:04:49 by mdor             ###   ########.fr       */
+/*   Created: 2022/12/09 10:14:37 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/09 10:22:08 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii (int c)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    if (c > 0 && c < 128)
-        return (c);
-    else
-        return (0);
-}
+    char *new;
+    int i;
 
-#include <stdio.h>
-int main()
-{
-    char a;
+    new = malloc(sizeof(char) * len);
+    i = 0;
 
-    a = '\0';
-    printf ("%d\n", ft_isascii(a));
+    while(i < len)
+    {
+        new[i] = s[start + i];
+        i++;
+    }
+    new[i] = '\0';
+    return (new);    
 }

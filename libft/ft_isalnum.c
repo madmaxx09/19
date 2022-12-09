@@ -6,9 +6,11 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:50:17 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:51:00 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/08 18:03:10 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int ft_isalnum(int digit)
 {
@@ -20,4 +22,11 @@ int ft_isalnum(int digit)
         return (1);
     else
         return (0);   
+}
+
+int main ()
+{
+    char c;
+    c = 'a';
+    printf("%d\n", ft_isalnum(c));
 }
