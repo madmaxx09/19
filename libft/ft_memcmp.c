@@ -6,15 +6,15 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:51:22 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/25 15:05:48 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/11 12:19:58 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_memcmp (const void *s1, const void *s2, size_t n)
+int ft_memcmp (const void *s1, const void *s2, int n)
 {
     const unsigned char *ss1;
     const unsigned char *ss2;
-    size_t  i;
+    int  i;
     
     i = -1; 
     ss1 = (const unsigned char *)s1;

@@ -6,25 +6,28 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/08 17:57:29 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/11 12:17:39 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-void ft_bzero(void *s, size_t n)
+void    ft_bzero(void *s, size_t n)
 {
     int i;
+    char *vo;
 
     i = 0;
+    vo = (char *)s;
     while(i < n)
     {
-        s[i] = '\0';
-        i++
+        vo[i] = '\0';
+        i++;
     }
 }
 
-int main ()
+/*int main ()
 {
-        char test[] =
-        printf("%s\n", ft_bzero(test));
-}
+    char test;
+    test [] = 'test';
+    printf("%s\n", ft_bzero(test));
+}*/

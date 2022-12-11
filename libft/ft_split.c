@@ -6,7 +6,7 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/25 09:19:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/08 18:27:23 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/09 18:08:44 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int    main()
 {
     int        i;
     char    **split;;
-    split = ft_split("l i saidl take this l lol", "l");
+    split = ft_split(" l i saidl take this l lol", "l");
     i = 0;
     while (split[i])
     {
