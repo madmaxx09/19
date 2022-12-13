@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/11 22:56:12 by mdor             ###   ########.fr       */
+/*   Created: 2022/12/11 12:59:49 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/13 13:38:17 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
-void	ft_bzero(void *s, unsigned int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	unsigned int		i;
-	char				*vo;
+	int		len;
+	int		i;
+	char	*str;
 
 	i = 0;
-	vo = (char *)s;
-	while (i < n)
+	if (!s || !f)
+		return (NULL);
+	len = ft_strlen((char *)s);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	while (i < len)
 	{
-		vo[i] = '\0';
+		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
+	return (str);
 }
-
-/*int main ()
-{
-	char test;
-	test [] = 'test';
-	printf("%s\n", ft_bzero(test));
-}*/

@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/11 22:56:12 by mdor             ###   ########.fr       */
+/*   Created: 2022/12/11 15:03:48 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/13 13:36:58 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
 
-void	ft_bzero(void *s, unsigned int n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned int		i;
-	char				*vo;
-
-	i = 0;
-	vo = (char *)s;
-	while (i < n)
+	if (!s)
+		return ;
+	while (*s)
 	{
-		vo[i] = '\0';
-		i++;
+		write(fd, s, 1);
+		s++;
 	}
+	return ;
 }
 
-/*int main ()
-{
-	char test;
-	test [] = 'test';
-	printf("%s\n", ft_bzero(test));
-}*/

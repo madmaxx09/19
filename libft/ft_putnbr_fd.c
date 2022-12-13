@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/11 22:56:12 by mdor             ###   ########.fr       */
+/*   Created: 2022/12/11 16:31:42 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/13 13:36:28 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include <unistd.h>
 
-void	ft_bzero(void *s, unsigned int n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int		i;
-	char				*vo;
+	char	c;
 
-	i = 0;
-	vo = (char *)s;
-	while (i < n)
+	if (n == -2147483648)
 	{
-		vo[i] = '\0';
-		i++;
+		write(fd, "-2,147,483,648", 11);
+		return ;
 	}
+	if (n < 0)
+	{
+		write(fd, "-", 1);
+		n = -n;
+	}
+	if (n >= 10)
+		ft_putnbr_fd(n / 10, fd);
+	c = n % 10 + '0';
+	write(fd, &c, 1);
 }
-
-/*int main ()
-{
-	char test;
-	test [] = 'test';
-	printf("%s\n", ft_bzero(test));
-}*/

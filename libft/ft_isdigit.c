@@ -6,14 +6,14 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:51:08 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:52:26 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/13 12:47:25 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int digit)
+int	ft_isdigit(int digit)
 {
-    if (digit >= 48 && digit <= 57)
-        return (1);
-    else
-        return (0);    
+	if (digit >= 48 && digit <= 57)
+		return (1);
+	else
+		return (0);
 }

@@ -6,14 +6,14 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:51:14 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:51:38 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/13 12:47:28 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int digit)
+int	ft_isprint(int digit)
 {
-    if (digit >= 0 && digit <= 31)
-        return (0);
-    else
-        return (1);
+	if (digit >= 0 && digit <= 31)
+		return (0);
+	else
+		return (1);
 }

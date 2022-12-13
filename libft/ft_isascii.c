@@ -6,23 +6,23 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:50:57 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/08 18:04:49 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/13 12:35:18 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii (int c)
+int	ft_isascii(int c)
 {
-    if (c > 0 && c < 128)
-        return (c);
-    else
-        return (0);
+	if (c > 0 && c < 128)
+		return (c);
+	else
+		return (0);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 int main()
 {
-    char a;
+	char a;
 
-    a = '\0';
-    printf ("%d\n", ft_isascii(a));
-}
+	a = '\0';
+	printf("%d\n", ft_isascii(a));
+}*/

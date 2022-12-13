@@ -6,21 +6,21 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:54:17 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/07 15:38:22 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/13 12:54:27 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strrchr(const char *string, int i)
+char	*ft_strrchr(const char *string, int i)
 {
-    int j; 
+	int	j;
 
-    j = 0;
-    
-    while (string[j])
-        j++;
-    while (j >= 0)
-    {
-        if (string[j] == i)
-    }
-    return (NULL)
+	j = 0;
+	while (string[j])
+		j++;
+	while (j >= 0)
+	{
+		if (string[j] == i)
+			return ((char *)&string[j]);
+	}
+	return (0);
 }

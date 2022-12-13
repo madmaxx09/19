@@ -6,24 +6,24 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:52:56 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/11 12:49:07 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/13 12:48:54 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char    *ft_strchr(char *str, int ch)
+char	*ft_strchr(char *str, int ch)
 {
-   int i;
+	int	i;
 
-   i = -1; 
-   while (str[++i])
-   { 
-        if (str[i] == ch)
-            return (str[i]);
-    }
-    return (*str);
+	i = -1;
+	while (str[++i])
+	{
+		if (str[i] == ch)
+			return (&str[i]);
+	}
+	return (str);
 }
 
 /*int main()
 {
-    
+
 }*/

@@ -6,17 +6,17 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 18:54:21 by mdor              #+#    #+#             */
-/*   Updated: 2022/11/24 18:54:22 by mdor             ###   ########.fr       */
+/*   Updated: 2022/12/13 12:51:54 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int digit)
+int	ft_tolower(int digit)
 {
-    if (digit >= 65 && digit <= 90)
-    {
-        digit += 32;
-        return (digit);
-    }
-    else
-        return (digit);
+	if (digit >= 65 && digit <= 90)
+	{
+		digit += 32;
+		return (digit);
+	}
+	else
+		return (digit);
 }

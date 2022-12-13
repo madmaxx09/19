@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/24 18:47:38 by mdor              #+#    #+#             */
-/*   Updated: 2022/12/11 22:56:12 by mdor             ###   ########.fr       */
+/*   Created: 2022/12/11 22:43:08 by mdor              #+#    #+#             */
+/*   Updated: 2022/12/13 12:54:51 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef LIBFT_H
+# define LIBFT_H
 
-void	ft_bzero(void *s, unsigned int n)
-{
-	unsigned int		i;
-	char				*vo;
+void	ft_bzero(void *s, unsigned int n);
+int		ft_strlen(char *str);
 
-	i = 0;
-	vo = (char *)s;
-	while (i < n)
-	{
-		vo[i] = '\0';
-		i++;
-	}
-}
-
-/*int main ()
-{
-	char test;
-	test [] = 'test';
-	printf("%s\n", ft_bzero(test));
-}*/
+#endif
