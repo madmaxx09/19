@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 19:21:42 by mdor              #+#    #+#             */
-/*   Updated: 2023/03/13 17:11:20 by mdor             ###   ########.fr       */
+/*   Created: 2023/04/21 16:01:44 by mdor              #+#    #+#             */
+/*   Updated: 2023/04/24 18:33:21 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-#include <stdio.h>
-#include <unistd.h>
-#include <stddef.h>
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
+
+#include <starg.h>
 #include <stdlib.h>
-#include <limits.h>
+#include <stdio.h>
 
-size_t		ft_strlen(const char *str);
-char		*ft_strjoin(char const *s1, char const *s2);
-char		*ft_strchr(char *s, int c);
-void		ft_bzero(void *s, size_t n);
-void		*ft_calloc(size_t count, size_t size);
+int		ft_putstring(char *str);
+int		ft_putchr(char c);
+int 	ft_putint(int n);
+int 	ft_putpourcent(void);
+int		ft_manage(char prefix, va_list arguments);
+int		ft_printf(const char *str, ...);
+int 	ft_prefixcheck(char c);
+char	*ft_itoa(int n);
 
-#endif 
+#endif

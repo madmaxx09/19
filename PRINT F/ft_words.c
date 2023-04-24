@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_words.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 19:21:42 by mdor              #+#    #+#             */
-/*   Updated: 2023/03/13 17:11:20 by mdor             ###   ########.fr       */
+/*   Created: 2023/04/21 17:52:45 by mdor              #+#    #+#             */
+/*   Updated: 2023/04/24 18:34:12 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-#include <stdio.h>
-#include <unistd.h>
-#include <stddef.h>
-#include <stdlib.h>
-#include <limits.h>
+#include "printf.h"
 
-size_t		ft_strlen(const char *str);
-char		*ft_strjoin(char const *s1, char const *s2);
-char		*ft_strchr(char *s, int c);
-void		ft_bzero(void *s, size_t n);
-void		*ft_calloc(size_t count, size_t size);
+int	ft_putstring(char *str)
+{
+	int	i;
 
-#endif 
+	if (!str)
+		return ;
+	while (str[i])
+	{
+		ft_putchr(str[i]);
+		i++;
+	}
+	return (i);
+}
+
+int	ft_putchr(char c)
+{
+	write(1, &c, 1);
+	return(1);
+}

@@ -6,13 +6,13 @@
 /*   By: mdor <mdor@student.s19.be>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:18:44 by mdor              #+#    #+#             */
-/*   Updated: 2023/03/12 19:40:41 by mdor             ###   ########.fr       */
+/*   Updated: 2023/03/13 17:11:35 by mdor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-/*char	*ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
 	int		j;
@@ -37,7 +37,7 @@
 		new[j++] = s2[i++];
 	new[j] = '\0';
 	return (new);
-}*/
+}
 
 size_t	ft_strlen(const char *str)
 {
