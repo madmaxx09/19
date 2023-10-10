@@ -2,6 +2,8 @@
 	"C_Cpp.errorSquiggles": "Disabled",
 	"files.associations": {
 		"printf.C": "cpp",
-		"print_f.C": "cpp"
+		"print_f.C": "cpp",
+		"*.tcc": "c",
+		"fstream": "c"
 	}
 }
